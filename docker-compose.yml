@@ -1,6 +1,9 @@
+version: '3'
 services:
   accounts:
-    image: "gloonch/accounts"
+    build:
+      context: ./accounts
+      dockerfile: Dockerfile
     container_name: accounts-ms
     ports:
       - "8080:8080"
@@ -9,10 +12,12 @@ services:
         limits:
           memory: 700m
     networks:
-      -eazybank
+      - eazybank
 
   loans:
-    image: "gloonch/loans"
+    build:
+      context: ./loans
+      dockerfile: Dockerfile
     container_name: loans-ms
     ports:
       - "8090:8090"
@@ -21,10 +26,12 @@ services:
         limits:
           memory: 700m
     networks:
-      -eazybank
+      - eazybank
 
   cards:
-    image: "gloonch/cards"
+    build:
+      context: ./cards
+      dockerfile: Dockerfile
     container_name: cards-ms
     ports:
       - "9000:9000"
@@ -33,8 +40,7 @@ services:
         limits:
           memory: 700m
     networks:
-      -eazybank
-
+      - eazybank
 
 networks:
   eazybank:
