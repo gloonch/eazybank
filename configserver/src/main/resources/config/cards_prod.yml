@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+accounts:
+  #  message:"Welcome to EazyBank cards related prod APIs "
+  contactDetails:
+    name: "Max Ashiwa - Product Owner"
+    email: "Ashiwa@eazybank.com"
+  onCallSupport:
+    - (555) 256-5455
+    - (555) 523-7896
