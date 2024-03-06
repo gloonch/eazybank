@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+build:
+  version: "2.0"
+
+accounts:
+  #  message:"Welcome to EazyBank accounts related QA APIs"
+  contactDetails:
+    name: "Samantha Smith - QA Lead"
+    email: "SSmith@eazybank.com"
+  onCallSupport:
+    - (555) 256-5524
+    - (555) 523-1342
